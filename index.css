@@ -1,0 +1,131 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.add,
+.shuffle {
+  width: 10vw;
+  padding: 3vw;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 7vw;
+  font-family: monospace;
+  text-decoration: none;
+  color: #000;
+}
+
+.cards {
+  margin-top: 19vw;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  margin: 20px 20px 0 20px;
+  height: 40vw;
+}
+
+#template {
+  display: none;
+}
+
+.front,
+.back {
+  position: absolute;
+  inset: 0;
+  border-radius: 2vw;
+  transition: all 0.3s;
+}
+
+.front {
+  background-image: linear-gradient(45deg, #5dbece, #4dccd2);
+  transform: rotate(0deg);
+  transform-origin: 3% 3%;
+}
+
+.card.flip .front {
+  transform: rotate(-135deg);
+}
+
+.back {
+  transform: rotate(-1deg);
+  transform-origin: 0% 0%;
+  background-image: linear-gradient(45deg, #fbbd96, #f0b7be);
+}
+
+.card.flip .back {
+  transform: rotate(0deg);
+}
+
+.card:not(.editing) .front,
+.card:not(.editing) .back {
+  user-select: none;
+}
+
+.edit,
+.tick,
+.cross {
+  position: absolute;
+  padding: 1vw;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.edit,
+.tick {
+  right: 2vw;
+  top: 2vw;
+}
+
+.edit {
+  width: 8vw;
+}
+
+.card.editing .edit {
+  width: 0;
+}
+
+.tick,
+.cross {
+  width: 0;
+}
+
+.card.editing .tick {
+  width: 8vw;
+}
+
+.cross {
+  left: 2vw;
+  top: 2vw;
+}
+
+.card.editing .cross {
+  width: 8vw;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+}

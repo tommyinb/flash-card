@@ -1,0 +1,23 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+.data {
+  padding: 5vw;
+  font-size: 4vw;
+  font-family: monospace;
+  white-space: pre;
+}
+
+.save {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  width: 12vw;
+}
