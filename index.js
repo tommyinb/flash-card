@@ -57,6 +57,11 @@ $(async function () {
   await (async function () {
     const oldCards = await list(database);
 
+    if (oldCards.length <= 0) {
+      add();
+      return;
+    }
+
     oldCards.forEach(({ id, front, back }) => {
       const oldCard = template.clone(true).attr("id", id).prependTo(".cards");
 
@@ -66,12 +71,15 @@ $(async function () {
   })();
 
   $(".add").click(function () {
-    const id = `${Date.now()}-${Math.ceil(Math.random() * 999)}`;
-    const card = template.clone(true).attr("id", id).prependTo(".cards");
+    const card = add();
 
     setEdit(card);
     return false;
   });
+  function add() {
+    const id = `${Date.now()}-${Math.ceil(Math.random() * 999)}`;
+    return template.clone(true).attr("id", id).prependTo(".cards");
+  }
 
   $(".shuffle").click(shuffle);
 
