@@ -2,15 +2,16 @@ self.addEventListener("install", (event) => {
   console.log("installing…");
 
   const filesToCache = [
-    "/flash-card/",
-    "/flash-card/database.js",
-    "/flash-card/jquery-3.6.0.min.js",
-    "/flash-card/index.html",
-    "/flash-card/index.js",
-    "/flash-card/index.css",
-    "/flash-card/data.html",
-    "/flash-card/data.js",
-    "/flash-card/data.css",
+    "database.js",
+    "jquery-3.6.0.min.js",
+    "index.html",
+    "index.js",
+    "index.css",
+    "shuffle.png",
+    "plus.png",
+    "edit.png",
+    "tick.png",
+    "cross.png",
   ];
 
   event.waitUntil(
