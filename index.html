@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="index.css" />
 
     <title>Flash Card</title>
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
-          .register("/worker.js")
+          .register("worker.js")
           .then((reg) => console.log("worker registered!", reg))
           .catch((err) => console.error("Error!", err));
       }
