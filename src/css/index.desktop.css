@@ -9,6 +9,12 @@
     font-size: 4vw;
   }
 
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
   .card {
     width: 23vw;
     height: 14vw;
