@@ -6,5 +6,5 @@ Just install it when browsing with your phone.
 
 ## Pages
 
-- Entrance <https://tommyinb.github.com/flash-card/src/index.html>
-- Example <https://tommyinb.github.com/flash-card/src/index.html?example>
+- Entrance <https://tommyinb.github.io/flash-card/src/index.html>
+- Example <https://tommyinb.github.io/flash-card/src/index.html?example>

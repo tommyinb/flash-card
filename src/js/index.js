@@ -60,7 +60,7 @@ $(async function () {
     const cards = await list(database);
 
     if (cards.length <= 0) {
-      add();
+      add(undefined, "Hi", "ツ");
       return;
     }
 
@@ -86,7 +86,6 @@ $(async function () {
 
   $(".shuffle").click(shuffle);
 
-  shuffle();
   function shuffle() {
     const oldCards = $(".card:not(#template)").toArray();
 

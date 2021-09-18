@@ -3,20 +3,26 @@ $(function () {
     return;
   }
 
+  $(".title").attr("href", "?");
+
   const cards = [
-    { id: "1", front: "Abc", back: "Bcd" },
-    { id: "1", front: "Abc", back: "Bcd" },
-    { id: "1", front: "Abc", back: "Bcd" },
+    { front: "This", back: "Meaning" },
+    { front: "is a", back: "that" },
+    { front: "PWA", back: "you" },
+    { front: "Progressive", back: "can" },
+    { front: "Web", back: "simply" },
+    { front: "App", back: "install" },
+    { front: "!", back: "it" },
   ];
 
-  cards.forEach(({ id, front, back }) => {
+  cards.forEach(({ front, back }) => {
     const card = $("#template").clone(true).addClass("example");
 
-    card.attr("id", id || `${Date.now()}-${Math.ceil(Math.random() * 999)}`);
+    card.attr("id", "example");
 
-    card.find(".front .content").text(front || "");
-    card.find(".back .content").text(back || "");
+    card.find(".front .content").text(front);
+    card.find(".back .content").text(back);
 
-    return card.prependTo(".cards");
+    return card.appendTo(".cards");
   });
 });
