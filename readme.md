@@ -1,8 +1,8 @@
 # Flash Card
 
-A dead simple flash card progressive web app
+A dead simple flash card progressive web app - just install it when browsing with your phone.
 
-Just install it when browsing with your phone.
+![Preview](https://tommyinb.github.io/flash-card/resources/preview.png)
 
 ## Pages
 

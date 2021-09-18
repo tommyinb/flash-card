@@ -12,7 +12,7 @@ $(function () {
     { front: "Progressive", back: "can" },
     { front: "Web", back: "simply" },
     { front: "App", back: "install" },
-    { front: "!", back: "it" },
+    { front: "!", back: "です" },
   ];
 
   cards.forEach(({ front, back }) => {
