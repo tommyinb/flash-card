@@ -10,19 +10,19 @@
   }
 
   .card {
-    width: 30vw;
-    height: 17vw;
-    margin: 20px 0;
+    width: 23vw;
+    height: 14vw;
+    margin: 15px 0;
   }
 
   .edit,
   .tick,
   .cross {
     --margin: 0.5vw;
-    --width: 3vw;
+    --width: 2vw;
   }
 
   .content {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
