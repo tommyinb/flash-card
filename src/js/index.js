@@ -29,6 +29,10 @@ $(async function () {
 
     card.find(".front, .back").find(".content").attr("contentEditable", false);
 
+    if (card.hasClass("example")) {
+      return;
+    }
+
     const id = card.attr("id");
     const front = card.find(".front .content").text();
     const back = card.find(".back .content").text();
@@ -52,22 +56,15 @@ $(async function () {
     return false;
   });
 
-  const template = $("#template");
-
   await (async function () {
-    const oldCards = await list(database);
+    const cards = await list(database);
 
-    if (oldCards.length <= 0) {
+    if (cards.length <= 0) {
       add();
       return;
     }
 
-    oldCards.forEach(({ id, front, back }) => {
-      const oldCard = template.clone(true).attr("id", id).prependTo(".cards");
-
-      oldCard.find(".front .content").text(front);
-      oldCard.find(".back .content").text(back);
-    });
+    cards.forEach(({ id, front, back }) => add(id, front, back));
   })();
 
   $(".add").click(function () {
@@ -76,9 +73,15 @@ $(async function () {
     setEdit(card);
     return false;
   });
-  function add() {
-    const id = `${Date.now()}-${Math.ceil(Math.random() * 999)}`;
-    return template.clone(true).attr("id", id).prependTo(".cards");
+  function add(id, front, back) {
+    const card = $("#template").clone(true);
+
+    card.attr("id", id || `${Date.now()}-${Math.ceil(Math.random() * 999)}`);
+
+    card.find(".front .content").text(front || "");
+    card.find(".back .content").text(back || "");
+
+    return card.prependTo(".cards");
   }
 
   $(".shuffle").click(shuffle);
