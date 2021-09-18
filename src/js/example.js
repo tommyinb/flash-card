@@ -3,7 +3,7 @@ $(function () {
     return;
   }
 
-  $(".title").attr("href", "?");
+  $(".title").attr("href", "https://github.com/tommyinb/flash-card");
 
   const cards = [
     { front: "This", back: "Meaning" },
