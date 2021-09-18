@@ -1,0 +1,28 @@
+@media screen and (min-width: 1500px) {
+  .add,
+  .shuffle {
+    width: 4vw;
+    padding: 1vw;
+  }
+
+  .title {
+    font-size: 4vw;
+  }
+
+  .card {
+    width: 30vw;
+    height: 17vw;
+    margin: 20px 0;
+  }
+
+  .edit,
+  .tick,
+  .cross {
+    --margin: 0.5vw;
+    --width: 3vw;
+  }
+
+  .content {
+    font-size: 5vw;
+  }
+}

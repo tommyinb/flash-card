@@ -1,0 +1,10 @@
+@media screen and (min-width: 1500px) {
+  .data {
+    padding: 3vw;
+    font-size: 18px;
+  }
+
+  .save {
+    width: 5vw;
+  }
+}

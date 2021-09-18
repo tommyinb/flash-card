@@ -5,10 +5,8 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -32,7 +30,7 @@ body {
 }
 
 .cards {
-  margin-top: 19vw;
+  margin-top: 20px;
   padding-bottom: 20px;
   overflow: hidden;
 }
@@ -84,6 +82,8 @@ body {
 .tick,
 .cross {
   position: absolute;
+  --margin: 2vw;
+  --width: 8vw;
   padding: 1vw;
   opacity: 0.5;
   transition: all 0.3s;
@@ -91,12 +91,12 @@ body {
 
 .edit,
 .tick {
-  right: 2vw;
-  top: 2vw;
+  right: var(--margin);
+  top: var(--margin);
 }
 
 .edit {
-  width: 8vw;
+  width: var(--width);
 }
 
 .card.editing .edit {
@@ -109,16 +109,16 @@ body {
 }
 
 .card.editing .tick {
-  width: 8vw;
+  width: var(--width);
 }
 
 .cross {
-  left: 2vw;
-  top: 2vw;
+  left: var(--margin);
+  top: var(--margin);
 }
 
 .card.editing .cross {
-  width: 8vw;
+  width: var(--width);
 }
 
 .content {
