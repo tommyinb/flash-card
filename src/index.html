@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flash Card</title>
+    <link rel="icon" type="image/png" href="images/icon-192x192.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <img class="shuffle" src="images/shuffle.png" />
+
+      <a class="title" href="data.html" target="_blank"> Flash Card </a>
+
+      <img class="add" src="images/plus.png" />
+    </div>
+
+    <div class="cards">
+      <div id="template" class="card" time="0">
+        <div class="back">
+          <div class="content"></div>
+
+          <img class="edit" src="images/edit.png" />
+          <img class="tick" src="images/tick.png" />
+
+          <img class="cross" src="images/cross.png" />
+        </div>
+
+        <div class="front">
+          <div class="content"></div>
+
+          <img class="edit" src="images/edit.png" />
+          <img class="tick" src="images/tick.png" />
+
+          <img class="cross" src="images/cross.png" />
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js" type="module"></script>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("js/worker.js");
+      }
+    </script>
+  </body>
+</html>
