@@ -10,7 +10,7 @@ $(function () {
     { front: "is a", back: "that" },
     { front: "PWA", back: "you" },
     { front: "Progressive", back: "can" },
-    { front: "Web", back: "simply" },
+    { front: "Web", back: "easily" },
     { front: "App", back: "install" },
     { front: "!", back: "です" },
   ];
