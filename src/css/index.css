@@ -56,6 +56,7 @@ body {
   background-image: linear-gradient(45deg, #abd331, #61c730);
   transform: rotate(0deg);
   transform-origin: 3% 3%;
+  box-shadow: 2px 3px 10px 2px rgba(0, 0, 0, 0.05);
 }
 
 .card.flip .front {
@@ -66,6 +67,7 @@ body {
   background-image: linear-gradient(45deg, #f4398a, #ec1f5b);
   transform: rotate(-1deg);
   transform-origin: 0% 0%;
+  box-shadow: 3px 5px 10px 4px rgba(0, 0, 0, 0.05);
 }
 
 .card.flip .back {
