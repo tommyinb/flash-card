@@ -49,12 +49,11 @@ body {
 .back {
   position: absolute;
   inset: 0;
-  border-radius: 2vw;
   transition: all 0.3s;
 }
 
 .front {
-  background-image: linear-gradient(45deg, #5dbece, #4dccd2);
+  background-image: linear-gradient(45deg, #abd331, #61c730);
   transform: rotate(0deg);
   transform-origin: 3% 3%;
 }
@@ -64,9 +63,9 @@ body {
 }
 
 .back {
+  background-image: linear-gradient(45deg, #f4398a, #ec1f5b);
   transform: rotate(-1deg);
   transform-origin: 0% 0%;
-  background-image: linear-gradient(45deg, #fbbd96, #f0b7be);
 }
 
 .card.flip .back {
